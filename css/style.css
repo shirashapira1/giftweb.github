@@ -1,0 +1,379 @@
+
+body {
+  background-color: #efeae2;
+}
+header {
+  background-image: url('./img/bg.jpg'); /* הנתיב היחסי לתמונה */
+  background-size: cover; /* התמונה תכסה את כל הרקע */
+  background-position: center; /* מיקום מרכזי */
+  background-repeat: no-repeat; /* ללא חזרה */
+  color: white; /* שינוי צבע הטקסט */
+  padding: 20px;
+  text-align: center;
+}
+.btn-custom {
+  background-color: rgba(251, 244, 228, 0.92); /* צבע רקע */
+  color: black; /* צבע טקסט */
+  border-color: black; /* צבע גבול */
+ font-family: 'Rubik', sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+p {
+  color:black;
+  font-weight: bold;
+  font-family:"Varela Round", sans-serif;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  width: 60%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 1rem;
+}
+
+.search-button {
+  margin-left: 0.5rem;
+  font-family: 'Rubik', sans-serif;
+}
+@media only screen and (max-width: 600px) {
+  .search-container {
+    display: flex;
+    flex-direction: column; /* שינוי לעמודה */
+    align-items: center; /* יישור למרכז */
+    gap: 10px; /* מרווח בין האלמנטים */
+    padding: 0.5rem;
+  }
+
+  .search-input {
+    width: 100%; /* רוחב מלא */
+    margin-bottom: 10px; /* מרווח תחתון */
+  }
+  .search-button {
+    width: 100%; /* רוחב מלא */
+  }
+}
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-family: "Varela Round", sans-serif;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color:black;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+}
+
+.btn-primary {
+  background-color: #141619;
+  color: #fff;
+}
+
+
+.flex-container-subjects {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding:2rem;
+}
+
+.flex-container-nav {
+  display: none;
+  justify-content: flex-start; /* כל האלמנטים מוצמדים לתחילת הקונטיינר */
+  align-items: center; /* האלמנטים מיושרים אופקית לאמצע */
+  flex-direction: column; /* האלמנטים יהיו אחד מתחת לשני */
+  list-style-type: none; /* הורדת הנקודות מהרשימה */
+}
+
+
+.flex-container-subjects li {
+  height: 100px;
+  width: calc(100% * (1/5) - 15px);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+.flex-container-nav {
+  position: fixed; /* מציב את התפריט מעל כל התוכן */
+          /* מיקם את התפריט בצד  של העמוד */
+  background-color: rgba(145, 128, 101, 0.85); /* תן רקע כדי לכסות תוכן מתחת */
+  z-index: 1000;   /* מבטיח שהתפריט יופיע מעל כל תוכן אחר */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:center;
+  list-style-type:none;
+  border-radius: 10px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* אופציונלי - צל לתפריט */
+padding: 1rem;
+font-family: 'Rubik', sans-serif}
+
+
+/*התפריט יוסתר כל עוד המסך קטן*/
+.flex-container-nav.hide-mobile {
+  display: none;
+  
+}
+
+/*הכפתור להצגת התפריט יוצע כל עוד המסך קטן*/
+#nav-button {
+  position: fixed; /* הכפתור תמיד יישאר במקום קבוע */
+  top: 10px; /* מיקום מרווח מראש העמוד */
+
+  z-index: 1100; /* מעל התפריט */
+  background-color: transparent;
+  border: none;
+}
+
+
+h1 {
+  color: black;
+  font-size: 2.5rem;  /* או כל גודל אחר שתרצי */
+  padding: 40px 40px;
+  max-width: 300px; /* או כל רוחב אחר שמתאים */
+  margin: 0 auto; /* למירכוז הכותרת */
+  text-align: center;
+  font-family: "Varela Round", sans-serif;
+}
+
+
+.flex-container-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.img-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.img-wrapper img {
+  width: 80%; /* הקטנת התמונות במובייל ל-80% מהרוחב */
+  height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .flex-container-subjects {
+    flex-direction: column; /* שינוי סידור הקוביות לעמודות */
+    align-items: center; /* יישור הקוביות למרכז */
+
+  }
+
+  .flex-container-subjects li {
+    width: 30%; /* הקטנת הקוביות */
+   
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  /* הצגת התפריט פתוח במסך גדול */
+  .flex-container-nav.hide-mobile {
+    display: flex;
+    flex-direction: row;
+    background-color: #333333;
+    padding: 1rem;
+    position: relative;
+    height: unset;
+    width: 100%;
+    top: 0;
+    gap: 15px;
+margin-bottom: 0;
+  font-family: "Varela Round", sans-serif;}
+  
+  
+  .modal-dialog {
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+ 
+    .flex-container-nav a {
+      color: #fff; /* צבע לבן */
+      text-decoration: none; /* הסרת קו תחתון */
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 10px 0;
+      width: 100%; /* מרחב קליק מלא */
+    }
+
+    .flex-container-nav a:hover {
+      color: #f0a500; /* צבע חדש במעבר עכבר */
+    }
+  
+  /* הכפתור להצגת התפריט יוסתר במסך גדול */
+  #nav-button {
+    display: none;
+   
+  }
+
+  .flex-container-images {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .img-wrapper {
+    width: calc(50% - 20px); /* חצי מהרוחב פחות מחצית מהרווח */
+  }
+
+  .img-wrapper img {
+    max-width: 100%;
+    height: 380px;
+  }
+
+  .img-wrapper p {
+    margin-top: 15px;
+    font-size: 1.3rem;
+  }
+
+  h1 {
+    color: #051e32;
+    font-size: 2.5rem;  /* או כל גודל אחר שתרצי */
+    padding: 40px 40px;
+    max-width: 600px; /* או כל רוחב אחר שמתאים */
+
+  }
+
+
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .filter-buttons .btn {
+    margin: 3px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/*pop-up*/
+
+
+.modal-dialog {
+  max-width: 600px;
+  margin: 1.75rem auto;
+  position: relative;
+  top: 30%; /* שינינו מ-50% ל-40% כדי להעלות את המודל */
+  transform: translateY(-50%);
+  padding: 2rem;
+}
+
+.modal-content {
+  border-radius: 12px;
+  padding: 20px; /* ריווח פנימי */
+}
+
+.modal-header {
+  border-bottom: 2px solid #efeae2;
+  padding: 20px; /* ריווח גדול יותר */
+}
+
+.modal-body {
+  padding: 30px; /* ריווח גדול יותר */
+  font-family: 'Rubik', sans-serif;
+}
+
+#giftIdeasList li {
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #efeae2;
+  border-radius: 16px;
+  font-size: 1.3rem;
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  font-family:"Varela Round" ,sans-serif;
+  font-weight: bold;
+}
+
+
+/*filter*/
+
+.filter-buttons {
+  margin: 20px 0;
+}
+
+.filter-buttons .btn {
+  margin: 5px;
+}
+
+.filter-buttons .btn.active {
+  background-color: #333;
+  color: white;
+}

@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="JavaScript Prog 3">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Telem">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Varela&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <title>תכנות 3 - JavaScript</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+    <body>
+    <div id="container">
+        <nav>
+            <button id="nav-button" class="btn-mobile" onclick="toggleNav()">
+                <img src="img/‏‏nav-icon.svg" alt="ניווט">
+            </button>
+            <ul id="main-nav" class="flex-container-nav hide-mobile">
+                <li><a href="#" class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">דף הבית</a></li>
+                <li><a href="#" class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">עלינו</a></li>
+                <li><a href="#" class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">המתנות שלנו</a></li>
+            </ul>
+        </nav>
+        <main>
+            <header>
+            <h1>
+              בחירת המתנה שלי
+            </h1>
+        <div class="search-container mb-4">
+            <input type="text" class="form-control search-input" placeholder="חפש מתנות..." id="searchInput"/>
+            <button class="btn btn-custom  btn btn-outline-dark search-button" onclick="searchGifts()">חיפוש</button>
+            <button class="btn btn-custom  btn btn-outline-dark search-button" onclick="resetSearch()">איפוס</button>
+        </div>
+                <p> סינון על פי  קטגוריה:</p>
+                <div class="filter-buttons mb-4 text-center">
+                    <button class="btn btn-custom btn-outline-dark" onclick="filterGifts('כלי בית')">כלי בית</button>
+                    <button class="btn btn-custom btn-outline-dark" onclick="filterGifts('בידור')">בידור</button>
+                    <button class="btn btn-custom btn-outline-dark" onclick="filterGifts('חינוך')">חינוך</button>
+                    <button class="btn btn-custom btn-outline-dark" onclick="filterGifts('אורח חיים')">אורח חיים</button>
+                    <button class="btn btn-custom btn-outline-dark" onclick="filterGifts('עיצוב בית')">עיצוב בית</button>
+                </div>
+            </header>
+        <div class="flex-container-subjects" id="giftsContainer">
+            <!-- כרטיסיות המתנות יוצגו כאן באופן דינמי -->
+        </div>
+            </main>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="giftModal" tabindex="-1" aria-labelledby="giftModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="giftModalLabel">רעיונות למתנה</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-unstyled" id="giftIdeasList">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    
+
+</html>
